@@ -95,8 +95,8 @@
                     </div>
                 </div>
             </div>
-        </div>
         </section>
+    </div>
         <section id="eventos" class="pt-5 pb-5">
             <div class="container">
                 <div class="row">
@@ -308,19 +308,19 @@
                         <form id="formulario">
                             <div class="mb-3 ">
                                 <label for="nome" class="form-label fw-bold text-colored">Seu nome</label>
-                                <input type="text" id="nome" class="form-control" required>
+                                <input name="nome" type="text" id="nome" class="form-control" required>
                             </div>
                             <div class="mb-3 ">
                                 <label for="email" class="form-label fw-bold text-colored">Seu email</label>
-                                <input type="email" id="email" class="form-control" required>
+                                <input name="email" type="email" id="email" class="form-control" required>
                             </div>
                             <div class="mb-3 ">
                                 <label for="telefone" class="form-label fw-bold text-colored">Seu telefone (opicional)</label>
-                                <input type="tel" id="telefone" class="form-control">
+                                <input name="telefone" type="tel" id="telefone" class="form-control">
                             </div>
                             <div class="mb-3 ">
                                 <label for="mensagem" class="form-label fw-bold text-colored">Sua mensagem</label>
-                                <textarea class="form-control" id="mensagem" required></textarea>
+                                <textarea name="mensagem" class="form-control" id="mensagem" required></textarea>
                             </div>
                             <button type="submit" class="btn fw-bold ">Enviar</button>
                         </form>
@@ -376,7 +376,15 @@
         });
     });
 </script>
+<script>
+    $(document).ready(function () {
+        $('#formulario').submit(function (e) {
 
-    
+            alert('Formulário enviado com sucesso!'); // Você pode substituir isso por um modal ou outra forma de exibição de mensagem
+
+        });
+    });
+</script>
+
 </body>
 </html>
